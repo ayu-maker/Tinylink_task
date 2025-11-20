@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>TinyLink Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>
+    TinyLink Dashboard
+    <button id="healthBtn" class="health-btn">Health Check</button>
+</h1>
+
+<div id="healthBox" class="health-box" style="display: none;"></div>
+
+
+    <!-- Add Link Form -->
+    <section class="card">
+        <h2>Create Short Link</h2>
+        <form id="addLinkForm">
+            <input type="text" id="urlInput" placeholder="Enter long URL" required />
+            <input type="text" id="codeInput" placeholder="Custom code (optional)" />
+            <button type="submit">Create</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <!-- Table of links -->
+    <section class="card">
+        <h2>All Links</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>URL</th>
+                    <th>Clicks</th>
+                    <th>Last Clicked</th>
+                    <th>Action</th>
+                    <th>Stats</th>
+                </tr>
+            </thead>
+
+            <tbody id="linksTableBody">
+                <!-- Loaded by JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
